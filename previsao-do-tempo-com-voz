@@ -1,0 +1,17 @@
+
+pip install pyttsx3
+
+import requests
+from bs4 import BeautifulSoup  #bibli do scraping
+import pyttsx3 #converter texto para audio
+
+search="A previsão do tempo no Rio de Janeiro é de "
+url = f"https://www.google.com/search?q={search}"
+r= requests.get(url)
+s= BeautifulSoup(r.text, "html.parser")
+update = s.find("div",class_ ="BNeawe").text
+A = (search,update)
+print(A)
+engine = pyttsx3.init()
+engine.say(A)
+engine.runAndWait()
