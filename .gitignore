@@ -1,0 +1,9 @@
+# Arquivo com suas chaves secretas — NUNCA suba isso para o GitHub
+.env
+
+# Checkpoints do Jupyter (gerados automaticamente)
+.ipynb_checkpoints/
+
+# Cache do Python
+__pycache__/
+*.pyc
